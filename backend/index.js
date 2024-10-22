@@ -17,9 +17,6 @@ app.use(cors({origin: "http://localhost:5173", credentials: true}));
 app.use(express.json()); // this allows us to parse json data from the : req.body
 app.use(cookieParser());
 
-app.get("/", (req, res) => {
-  res.send("Hello World");
-})
 
 app.use("/api/auth", authRoutes);
 
